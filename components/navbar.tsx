@@ -10,7 +10,7 @@ function LinkLeft({link, text}: LinkProps) {
 export default function Navbar() {
     return <div className="bg-[#2D2D2D] h-16 w-full flex justify-between items-center px-16 text-white text-xl font-semibold absolute">
         <div className="flex gap-16">
-            <LinkLeft link="/home" text="Domov" />
+            <LinkLeft link="/" text="Domov" />
             <LinkLeft link="/coaches" text="Coachové" />
             <LinkLeft link="/services" text="Služby" />
             <LinkLeft link="/reviews" text="Recenze" />
