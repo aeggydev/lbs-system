@@ -18,7 +18,7 @@ function Review({ review, index }: ReviewProps) {
         className="rounded-md"
       />
       <div className="py-2">{review.title}</div>
-      <div className="italic">{review.text}</div>
+      <div className="italic">“{review.text}”</div>
       <a href={`/review/${index}`}>CLICK me</a>
     </div>
   );
