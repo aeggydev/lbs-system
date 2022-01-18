@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-full min-h-full bg-red-500">
-      <div className="grid min-h-full">
+    <div className="w-full min-h-full">
+      <div className="grid min-h-screen bg-purple-600 -mt-16">
         <div className="absolute top-1/3 bg-gray-600 w-48 h-48 place-self-center rounded-full grid place-items-center select-none text-9xl text-white">
           ▶
         </div>
