@@ -26,7 +26,7 @@ function Review({ review, index }: ReviewProps) {
 
 export default function Reviews() {
   return (
-    <div className="bg-[#3D3D3D] min-h-[100vh]">
+    <div className="bg-[#3D3D3D] min-h-screen">
       <div className="text-center text-white text-3xl">Recenze</div>
       <div className="grid grid-cols-2 p-16 gap-8">
         {data.map((x, i) => (
