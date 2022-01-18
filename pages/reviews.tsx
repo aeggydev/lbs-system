@@ -4,7 +4,6 @@ import viktor from "../public/viktor.jpg";
 import lukas from "../public/lukas.jpg";
 import tomas from "../public/tomas.jpg";
 import adela from "../public/adela.jpg";
-import useToggle from "../hooks/useToggle";
 
 interface ReviewProps {
   title: JSX.Element;
@@ -60,29 +59,7 @@ const data: ReviewProps[] = [
   },
 ];
 
-function ReviewFullscreen({ title, textLong, image }: ReviewProps) {
-  return <div className="absolute left-0 top-16 w-full h-full bg-red-400 z-30">HELLO</div>;
-}
-
 function Review({ title, text, image, textLong }: ReviewProps) {
-  const [isOn, toggleIsOn] = useToggle(false);
-
-  const ReadMore = () => (
-    <>
-      <div className="font-semibold pt-3 pl-4 cursor-pointer select-none" onClick={() => toggleIsOn()}>
-        Přečíst více. →
-      </div>
-      {isOn ? (
-        <ReviewFullscreen
-          title={title}
-          textLong={textLong}
-          image={image}
-          text={text}
-        />
-      ) : null}
-    </>
-  );
-
   return (
     <div className="text-white font-serif">
       <Image
@@ -95,7 +72,6 @@ function Review({ title, text, image, textLong }: ReviewProps) {
       <div className="py-2">{title}</div>
       <div className="italic">{text}</div>
       <a href="/review/2">CLICK me</a>
-      {textLong ? <ReadMore /> : null}
     </div>
   );
 }
