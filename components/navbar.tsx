@@ -16,7 +16,7 @@ export default function Navbar() {
             <LinkLeft link="/reviews" text="Recenze" />
         </div>
         <div className="bg-[#F65A5A] h-10 flex items-center rounded-sm px-5">
-            <a href="/404" className="bg-[#F65A5A]">Kontaktovat</a>
+            <a href="/404">Kontaktovat</a>
         </div>
     </div>
 }
