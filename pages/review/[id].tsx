@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { data } from "../../data/reviews";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Review() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function Review() {
         </>
       ) : null}
       </div>
-      <a href="/reviews" className="font-bold pb-12 fixed bottom-0 text-xl">← Zpět.</a>
+      <span className="font-bold pb-12 fixed bottom-0 text-xl"><Link href="/reviews">← Zpět.</Link></span>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"
 
 import { Review, data } from "../data/reviews";
 
@@ -22,13 +23,15 @@ function Review({ review, index }: ReviewProps) {
 
   return (
     <div className="text-white font-serif">
-      {review.textLong ? <a href={url}>{Img}</a> : Img}
+      {review.textLong ? <Link href={url}>{Img}</Link> : Img}
       <div className="py-2 text-xl">{review.title}</div>
       <div className="italic">“{review.text}”</div>
       {review.textLong ? (
-        <a href={url} className="font-bold pl-4 pt-2 block text-lg">
+        <span className="font-bold pl-4 pt-2 block text-lg">
+          <Link href={url}>
           Přečíst více. →
-        </a>
+          </Link>
+        </span>
       ) : null}
     </div>
   );

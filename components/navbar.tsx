@@ -1,10 +1,12 @@
+import Link from "next/link"
+
 interface LinkProps {
     link: string
     text: string
 }
 
 function LinkLeft({link, text}: LinkProps) {
-    return <a className="" href={link}>{text}</a>
+    return <Link href={link}>{text}</Link>
 }
 
 export default function Navbar() {
@@ -16,7 +18,7 @@ export default function Navbar() {
             <LinkLeft link="/reviews" text="Recenze" />
         </div>
         <div className="bg-[#F65A5A] h-10 flex items-center rounded-sm px-5">
-            <a href="/404">Kontaktovat</a>
+            <Link href="/404">Kontaktovat</Link>
         </div>
     </div>
 }
