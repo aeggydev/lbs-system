@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#2e2b2b] p-6">
+      <div className="bg-zinc-800 p-6">
         <div className="pl-7 text-2xl mb-5 underline font-bold text-white pb-5">
           Náš team
         </div>
