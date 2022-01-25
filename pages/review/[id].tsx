@@ -27,7 +27,7 @@ export default function Review() {
         </>
       ) : null}
       </div>
-      <span className="font-bold pb-12 fixed bottom-0 text-xl"><Link href="/reviews">← Zpět.</Link></span>
+      <span className="font-bold pb-12 absolute bottom-0 text-xl"><Link href="/reviews">← Zpět.</Link></span>
     </div>
   );
 }
