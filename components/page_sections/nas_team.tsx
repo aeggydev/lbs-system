@@ -26,40 +26,22 @@ interface NasTeamProps {
 export default function NasTeam(props: NasTeamProps) {
   const frame = (
     <div
-      className="grid bg-white rounded-md w-4/6 shadow-gray-800"
-      style={{ gridTemplateRows: "1fr auto" }}
+      className="grid bg-white rounded-md shadow-gray-800"
+      style={{ gridTemplateRows: "1.8fr 1fr" }}
     >
       <div className="rounded-t-md" style={{ background: props.bg }} />
-      <div className="grid place-items-center px-4">
-        <div className="font-semibold text-gray-800 grid-cols-3 w-full grid h-9 items-center">
+      <div className="flex flex-col place-content-center place-items-center px-4">
+        <div className="font-semibold text-gray-800 grid-cols-3 w-full grid items-center pb-1">
           <div className="col-start-2 text-center">{props.name}</div>
           <div className="col-start-3 flex flex-row h-3/4 gap-1">
-            <FacebookIcon link=""></FacebookIcon>
-            <InstagramIcon link=""></InstagramIcon>
-            <YoutubeIcon link=""></YoutubeIcon>
+            <FacebookIcon link="" />
+            <InstagramIcon link="" />
+            <YoutubeIcon link="" />
           </div>
         </div>
+        <div className="text-center text-sm pb-2 font-medium text-zinc-800 leading-tight">{props.description}</div>
       </div>
     </div>
   );
-  const desc = (
-    <div className="text-white text-xl grid place-items-center text-left w-4/6">
-      {props.description}
-    </div>
-  );
-  return (
-    <div className="grid grid-cols-2 h-60 justify-items-center">
-      {props.descFirst ? (
-        <>
-          {desc}
-          {frame}
-        </>
-      ) : (
-        <>
-          {frame}
-          {desc}
-        </>
-      )}
-    </div>
-  );
+  return frame;
 }

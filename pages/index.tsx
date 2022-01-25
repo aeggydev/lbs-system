@@ -28,15 +28,36 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <About />
-      <div className="bg-zinc-800 p-6 scroll-m-16" id="coaches">
-        <div className="pl-7 text-3xl mb-5 font-bold text-white pb-5">
+      {/* <About /> */}
+      <div
+        className="bg-zinc-800 py-9 scroll-m-16 flex flex-col"
+        id="coaches"
+        style={{ minHeight: "70vh" }}
+      >
+        <div className="pl-7 text-3xl mb-2 font-bold text-white pb-5 text-center">
           Náš team
         </div>
-        <div className="px-36 flex flex-col gap-8">
+        <div
+          className="px-48 grid gap-12 items-stretch flex-grow"
+          style={{ gridTemplateColumns: "3fr 3fr 3fr" }}
+        >
           {TeamData.map((x, i) => (
             <NasTeam {...x} key={i} />
           ))}
+          <div className="flex items-center">
+            <div className="text-white">
+              <div className="font-medium">
+                Jako naši hlavní vizi máme sjednotit tým, který bude napříč
+                oddíly a stane se nejsilnějším v České Republice.
+              </div>
+              <br />
+              Zaručíme pečlivý, rozumný a daty podložený plán, aby zdokonalil
+              nejen sportovcův výkon, ale také sportovní rozhled. Zaručíme
+              pečlivý, rozumný a daty podložený plán, který nezlepší jen závaží
+              na čince či postava, ale také i sportovní rozhled. Můžeme předat
+              spoustu důležitých a užitečných informací.
+            </div>
+          </div>
         </div>
       </div>
       <Services />
