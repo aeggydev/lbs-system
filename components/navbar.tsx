@@ -6,7 +6,7 @@ interface LinkProps {
 }
 
 function LinkLeft({link, text}: LinkProps) {
-    return <Link href={link}>{text}</Link>
+    return <div className="hover:underline"><Link href={link}>{text}</Link></div>
 }
 
 export default function Navbar() {
