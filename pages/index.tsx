@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       </div>
       <About />
       <div className="bg-zinc-800 p-6 scroll-m-16" id="coaches">
-        <div className="pl-7 text-2xl mb-5 underline font-bold text-white pb-5">
+        <div className="pl-7 text-3xl mb-5 font-bold text-white pb-5">
           Náš team
         </div>
         <div className="px-36 flex flex-col gap-8">
