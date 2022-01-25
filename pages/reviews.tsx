@@ -39,8 +39,8 @@ function Review({ review, index }: ReviewProps) {
 
 export default function Reviews() {
   return (
-    <div className="bg-[#3D3D3D] min-h-screen">
-      <div className="text-center text-white text-3xl mt-4">Recenze</div>
+    <div className="bg-[#3D3D3D] min-h-screen py-6">
+      <div className="text-center text-white text-3xl font-medium">Recenze</div>
       <div className="grid grid-cols-2 py-10 px-40 gap-8">
         {data.map((x, i) => (
           <Review review={x} key={i} index={i} />
