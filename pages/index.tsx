@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import NasTeam, { TeamData } from "../components/page_sections/nas_team";
+import Services from "../components/page_sections/services";
 
 const Home: NextPage = () => {
   return (
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
           ))}
         </div>
       </div>
+      <Services />
     </div>
   );
 };

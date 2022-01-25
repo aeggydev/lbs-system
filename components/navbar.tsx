@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="flex gap-16">
             <LinkLeft link="/" text="Domov" />
             <LinkLeft link="/coaches" text="Coachové" />
-            <LinkLeft link="/services" text="Služby" />
+            <LinkLeft link="#services" text="Služby" />
             <LinkLeft link="/reviews" text="Recenze" />
         </div>
         <div className="bg-[#F65A5A] h-10 flex items-center rounded-sm px-5">
