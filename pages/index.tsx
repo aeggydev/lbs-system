@@ -1,36 +1,50 @@
 import type { NextPage } from "next";
+import FacebookIcon from "../components/icons/facebook";
+import InstagramIcon from "../components/icons/instagram";
+import YoutubeIcon from "../components/icons/youtube";
 
 const Team: NasTeamProps[] = [
   {
     name: "David Lacina",
     description: `David závodí aktivně od roku 2017. Za jeho dlouholetou kariéru nasbíral mnoho zkušeností z jak národních tak i z mezinárodních soutěží, které rád předá dalším sportovcům.`,
     descFirst: false,
-    bg: "#A35959"
+    bg: "#A35959",
   },
   {
     name: "Jan Bolech",
     description: `Jeho trenérský cíl je zajistit svým klientům co nejlepší výkon v den závodů. Snaží se, aby každý sportovec, se kterým pracuje, získával sebevědomí každý trénink.`,
     descFirst: true,
-    bg: "#5AAC53"
-  }
+    bg: "#5AAC53",
+  },
 ];
 
 interface NasTeamProps {
   description: string;
   name: string;
   descFirst: boolean;
-  bg: string
+  bg: string;
 }
 function NasTeam(props: NasTeamProps) {
   const frame = (
-    <div className="flex flex-col bg-white rounded-md w-3/5 shadow-gray-800">
-      <div className="flex-1 rounded-t-md" style={{background: props.bg}} />
-      <div className="grid place-items-center">
-        <div className="font-semibold text-gray-800 h-7 flex items-center">{props.name}</div>
+    <div className="grid bg-white rounded-md w-3/5 shadow-gray-800" style={{gridTemplateRows: "1fr auto"}}>
+      <div className="rounded-t-md" style={{ background: props.bg }} />
+      <div className="grid place-items-center px-4">
+        <div className="font-semibold text-gray-800 grid-cols-3 w-full grid h-9 items-center">
+          <div className="col-start-2 text-center">{props.name}</div>
+          <div className="col-start-3 flex flex-row h-3/4 gap-1">
+            <FacebookIcon link=""></FacebookIcon>
+            <InstagramIcon link=""></InstagramIcon>
+            <YoutubeIcon link=""></YoutubeIcon>
+          </div>
+        </div>
       </div>
     </div>
   );
-  const desc = <div className="text-white text-xl grid place-items-center text-center font-medium">{props.description}</div>;
+  const desc = (
+    <div className="text-white text-xl grid place-items-center text-center font-medium">
+      {props.description}
+    </div>
+  );
   return (
     <div className="grid grid-cols-2 h-60 justify-items-center">
       {props.descFirst ? (
@@ -74,7 +88,9 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="bg-[#2e2b2b] p-6">
-        <div className="pl-6 text-2xl mb-5 underline font-bold text-white">Náš team</div>
+        <div className="pl-6 text-2xl mb-5 underline font-bold text-white">
+          Náš team
+        </div>
         <div className="px-28 flex flex-col gap-8">
           {Team.map((x, i) => (
             <NasTeam {...x} key={i} />
