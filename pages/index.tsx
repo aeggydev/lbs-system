@@ -26,7 +26,7 @@ interface NasTeamProps {
 }
 function NasTeam(props: NasTeamProps) {
   const frame = (
-    <div className="grid bg-white rounded-md w-3/5 shadow-gray-800" style={{gridTemplateRows: "1fr auto"}}>
+    <div className="grid bg-white rounded-md w-4/6 shadow-gray-800" style={{gridTemplateRows: "1fr auto"}}>
       <div className="rounded-t-md" style={{ background: props.bg }} />
       <div className="grid place-items-center px-4">
         <div className="font-semibold text-gray-800 grid-cols-3 w-full grid h-9 items-center">
@@ -41,7 +41,7 @@ function NasTeam(props: NasTeamProps) {
     </div>
   );
   const desc = (
-    <div className="text-white text-xl grid place-items-center text-center font-medium">
+    <div className="text-white text-xl grid place-items-center text-left w-4/6">
       {props.description}
     </div>
   );
@@ -88,10 +88,10 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="bg-[#2e2b2b] p-6">
-        <div className="pl-6 text-2xl mb-5 underline font-bold text-white">
+        <div className="pl-7 text-2xl mb-5 underline font-bold text-white pb-5">
           Náš team
         </div>
-        <div className="px-28 flex flex-col gap-8">
+        <div className="px-36 flex flex-col gap-8">
           {Team.map((x, i) => (
             <NasTeam {...x} key={i} />
           ))}
