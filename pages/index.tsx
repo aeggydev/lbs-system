@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import About from "../components/page_sections/about";
 import NasTeam, { TeamData } from "../components/page_sections/nas_team";
 import Services from "../components/page_sections/services";
 
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <About />
       <div className="bg-zinc-800 p-6">
         <div className="pl-7 text-2xl mb-5 underline font-bold text-white pb-5">
           Náš team
