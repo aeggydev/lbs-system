@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           Náš team
         </div>
         <div
-          className="px-48 grid gap-12 items-stretch flex-grow grid-rows-3 md:grid-rows-1 md:grid-cols-3">
+          className="px-12 md:px-48 grid gap-12 items-stretch flex-grow grid-rows-3 md:grid-rows-1 md:grid-cols-3">
           {TeamData.map((x, i) => (
             <NasTeam {...x} key={i} />
           ))}

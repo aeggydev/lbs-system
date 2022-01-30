@@ -7,7 +7,7 @@ export default function Layout({children}: PropsWithChildren<{}>) {
         <>
             <Navbar />
             <main className="min-h-screen flex min-w-screen">{children}</main>
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <div className="py-12 px-44 flex flex-col gap-5" id="services">
+    <div className="py-12 px-8 md:px-44 flex flex-col gap-5" id="services">
       <div className="text-3xl font-semibold text-center">Služby</div>
       <div>
         <div className="font-medium text-xl text-center pb-2">

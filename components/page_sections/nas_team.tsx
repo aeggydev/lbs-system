@@ -1,3 +1,4 @@
+import useEmblaCarousel from "embla-carousel-react";
 import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
 import YoutubeIcon from "../icons/youtube";
@@ -24,12 +25,26 @@ interface NasTeamProps {
   bg: string;
 }
 export default function NasTeam(props: NasTeamProps) {
+  const [emblaRef] = useEmblaCarousel();
+
   const frame = (
     <div
-      className="grid bg-white rounded-md shadow-gray-800"
+      className="grid bg-white rounded-md shadow-gray-800 overflow-hidden hover:scale-105 transition-all"
       style={{ gridTemplateRows: "1.8fr 1fr" }}
     >
-      <div className="rounded-t-md" style={{ background: props.bg }} />
+      <div className="rounded-t-md" style={{ background: props.bg }}>
+        <div className="embla w-full h-full">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container">
+              {[1, 2, 3, 4, 5, 6].map((index, i) => (
+                <div className="embla__slide" key={i}>
+                  <div className="embla__slide__inner">{index}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col place-content-center place-items-center px-4">
         <div className="font-semibold text-gray-800 grid-cols-3 w-full grid items-center pb-1">
           <div className="col-start-2 text-center">{props.name}</div>
@@ -39,7 +54,9 @@ export default function NasTeam(props: NasTeamProps) {
             <YoutubeIcon link="" />
           </div>
         </div>
-        <div className="text-center text-sm pb-2 font-medium text-zinc-800 leading-tight">{props.description}</div>
+        <div className="text-center text-sm pb-2 font-medium text-zinc-800 leading-tight">
+          {props.description}
+        </div>
       </div>
     </div>
   );
