@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import About from "../components/page_sections/about";
-import NasTeam, { TeamData } from "../components/page_sections/nas_team";
+import NasTeam from "../components/page_sections/nas_team";
+import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
 
 const Home: NextPage = () => {

@@ -1,47 +1,32 @@
 import useEmblaCarousel from "embla-carousel-react";
+import { NasTeamProps } from "../../data/NasTeam";
 import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
 import YoutubeIcon from "../icons/youtube";
+import Image from "next/image"
 
-export const TeamData: NasTeamProps[] = [
-  {
-    name: "David Lacina",
-    description: `David závodí aktivně od roku 2017. Za jeho dlouholetou kariéru nasbíral mnoho zkušeností z jak národních tak i z mezinárodních soutěží, které rád předá dalším sportovcům.`,
-    descFirst: false,
-    bg: "#A35959",
-  },
-  {
-    name: "Jan Bolech",
-    description: `Jeho trenérský cíl je zajistit svým klientům co nejlepší výkon v den závodů. Snaží se, aby každý sportovec, se kterým pracuje, získával sebevědomí každý trénink.`,
-    descFirst: true,
-    bg: "#5AAC53",
-  },
-];
 
-interface NasTeamProps {
-  description: string;
-  name: string;
-  descFirst: boolean;
-  bg: string;
+function EmblaSlide(props: {image: StaticImageData, index: number}) {
+  const alt = `Fotka ${props.index + 1}`;
+  return <div className="embla__slide relative grid items-center" style={{flex: "0 0 100%"}}>
+    <Image src={props.image} alt={alt} />
+  </div>
 }
-export default function NasTeam(props: NasTeamProps) {
-  const [emblaRef] = useEmblaCarousel();
 
-  const frame = (
+export default function NasTeam(props: NasTeamProps) {
+  const [emblaRef] = useEmblaCarousel({loop: true})
+  
+  const maxHeight = Math.max(...props.images.map(x => x.height))
+
+  return (
     <div
       className="grid bg-white rounded-md shadow-gray-800 overflow-hidden hover:scale-105 transition-all"
-      style={{ gridTemplateRows: "1.8fr 1fr" }}
+      style={{ gridTemplateRows: "auto 1fr" }}
     >
-      <div className="rounded-t-md" style={{ background: props.bg }}>
-        <div className="embla w-full h-full">
-          <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container">
-              {[1, 2, 3, 4, 5, 6].map((index, i) => (
-                <div className="embla__slide" key={i}>
-                  <div className="embla__slide__inner">{index}</div>
-                </div>
-              ))}
-            </div>
+      <div className="rounded-t-md bg-zinc-400">
+        <div className="embla overflow-hidden w-full h-full" ref={emblaRef}>
+          <div className="embla__container flex h-full">
+            {props.images.map((x, i) => <EmblaSlide image={x} index={i} key={i} />)}
           </div>
         </div>
       </div>
@@ -60,5 +45,4 @@ export default function NasTeam(props: NasTeamProps) {
       </div>
     </div>
   );
-  return frame;
 }
