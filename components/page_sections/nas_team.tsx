@@ -12,13 +12,15 @@ function EmblaSlide(props: { image: StaticImageData; index: number }) {
       className="embla__slide grid items-center"
       style={{ flex: "0 0 100%" }}
     >
-      <div className="embla__slide__inner">
-        <div className="embla__slide__img">
-          <Image
+      <div className="embla__slide__inner h-full">
+        <div className="embla__slide__img h-full relative">
+           <Image
             src={props.image}
             alt={alt}
+            layout="fill"
+            objectFit="cover"
           />
-        </div>
+         </div>
       </div>
     </div>
   );
@@ -31,10 +33,10 @@ export default function NasTeam(props: NasTeamProps) {
 
   return (
     <div
-      className="grid bg-white rounded-md shadow-gray-800 overflow-hidden hover:scale-105 transition-all"
-      style={{ gridTemplateRows: "auto 1fr" }}
+      className="grid bg-white rounded-md shadow-gray-800 overflow-hidden"
+      style={{ gridTemplateRows: "1.8fr 1fr" }}
     >
-      <div className="rounded-t-md bg-zinc-400">
+      <div className="rounded-t-md">
         <div className="embla overflow-hidden w-full h-full" ref={emblaRef}>
           <div className="embla__container flex h-full">
             {props.images.map((x, i) => (
