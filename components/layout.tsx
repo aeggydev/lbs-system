@@ -6,7 +6,7 @@ export default function Layout({children}: PropsWithChildren<{}>) {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen flex">{children}</main>
+            <main className="min-h-screen flex min-w-screen">{children}</main>
             <Footer></Footer>
         </>
     )

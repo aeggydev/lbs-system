@@ -5,7 +5,7 @@ import Services from "../components/page_sections/services";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-full min-h-full">
+    <div className="min-w-full min-h-full">
       <div className="grid min-h-screen bg-purple-600 -mt-16">
         <div className="absolute top-1/3 bg-gray-600 w-48 h-48 place-self-center rounded-full grid place-items-center select-none text-9xl text-white">
           ▶
@@ -38,9 +38,7 @@ const Home: NextPage = () => {
           Náš team
         </div>
         <div
-          className="px-48 grid gap-12 items-stretch flex-grow"
-          style={{ gridTemplateColumns: "3fr 3fr 3fr" }}
-        >
+          className="px-48 grid gap-12 items-stretch flex-grow grid-rows-3 md:grid-rows-1 md:grid-cols-3">
           {TeamData.map((x, i) => (
             <NasTeam {...x} key={i} />
           ))}
