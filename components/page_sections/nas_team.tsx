@@ -28,7 +28,7 @@ function EmblaSlide(props: { image: StaticImageData; index: number }) {
 }
 
 export default function NasTeam(props: NasTeamProps) {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
+  const [emblaRef] = useEmblaCarousel({ loop: false });
 
   const maxHeight = Math.max(...props.images.map((x) => x.height));
 
