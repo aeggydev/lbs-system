@@ -5,9 +5,27 @@ import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
 import Image from "next/image";
 import playButton from "../public/playbutton.svg";
+import React from "react";
 
 // TODO: Přidat shadow
 const Home: NextPage = () => {
+  const [showPlayer, setShowPlayer] = React.useState(false);
+  const shadowPlayer = (
+    <div
+      className="fixed left-0 top-0 w-screen h-screen z-50 grid"
+      style={{ background: "rgba(0,0,0,0.75)" }}
+      onClick={() => setShowPlayer(false)}
+    >
+      <div
+        className="w-1/2 h-1/3 bg-white place-self-center flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div>foobar placeholder</div>
+        <video src="" controls className="flex-grow"></video>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-w-full min-h-full">
       <div className="grid min-h-screen bg-purple-600 -mt-16">
@@ -17,7 +35,9 @@ const Home: NextPage = () => {
             alt="Play button"
             className="place-self-center cursor-pointer select-none"
             draggable="false"
+            onClick={() => setShowPlayer(true)}
           />
+          {showPlayer && shadowPlayer}
         </div>
         <div className="justify-self-center self-end text-white text-center pb-16">
           <div
