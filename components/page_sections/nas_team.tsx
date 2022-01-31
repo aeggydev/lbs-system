@@ -19,6 +19,7 @@ function EmblaSlide(props: { image: StaticImageData; index: number }) {
             alt={alt}
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
           />
          </div>
       </div>

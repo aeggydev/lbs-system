@@ -17,6 +17,7 @@ function Review({ review, index }: ReviewProps) {
       src={review.image}
       width={2048}
       height={1365}
+      placeholder="blur"
       className={`rounded-md transition-all ${review.textLong ? "hover:scale-110 cursor-pointer" : ""}`}
     />
   );

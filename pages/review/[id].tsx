@@ -25,6 +25,7 @@ export default function Review() {
             <Image
               src={imageClone}
               alt="Obrázek recenzenta"
+              placeholder="blur"
               className="row-start-1 row-end-1 max-w-5 rounded-md"
             />
             <div className="text-center row-start-2 col-start-1">
