@@ -17,13 +17,13 @@ function Review({ review, index }: ReviewProps) {
       src={review.image}
       width={2048}
       height={1365}
-      className="rounded-md hover:scale-110 transition-all"
+      className={`rounded-md transition-all ${review.textLong ? "hover:scale-110 cursor-pointer" : ""}`}
     />
   );
 
   return (
     <div className="text-white font-serif">
-      {review.textLong ? <div className="cursor-pointer"><Link href={url}>{Img}</Link></div> : Img}
+      {review.textLong ? <Link href={url}>{Img}</Link> : Img}
       <div className="py-2 text-xl">{review.title}</div>
       <div className="italic">“{review.text}”</div>
       {review.textLong ? (
