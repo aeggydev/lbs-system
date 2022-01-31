@@ -3,14 +3,21 @@ import About from "../components/page_sections/about";
 import NasTeam from "../components/page_sections/nas_team";
 import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
+import Image from "next/image";
+import playButton from "../public/playbutton.svg";
 
 // TODO: Přidat shadow
 const Home: NextPage = () => {
   return (
     <div className="min-w-full min-h-full">
       <div className="grid min-h-screen bg-purple-600 -mt-16">
-        <div className="absolute top-1/3 bg-gray-600 w-48 h-48 place-self-center rounded-full grid place-items-center select-none text-9xl text-white">
-          ▶
+        <div className="absolute top-1/3 w-48 h-48 place-self-center grid">
+          <Image
+            src={playButton}
+            alt="Play button"
+            className="place-self-center cursor-pointer select-none"
+            draggable="false"
+          />
         </div>
         <div className="justify-self-center self-end text-white text-center pb-16">
           <div
@@ -39,8 +46,7 @@ const Home: NextPage = () => {
         <div className="pl-7 text-3xl mb-2 font-bold text-white pb-5 text-center">
           Náš team
         </div>
-        <div
-          className="px-12 md:px-48 grid gap-12 items-stretch flex-grow grid-rows-3 md:grid-rows-1 md:grid-cols-3">
+        <div className="px-12 md:px-48 grid gap-12 items-stretch flex-grow grid-rows-3 md:grid-rows-1 md:grid-cols-3">
           {TeamData.map((x, i) => (
             <NasTeam {...x} key={i} />
           ))}
