@@ -4,6 +4,7 @@ import NasTeam from "../components/page_sections/nas_team";
 import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
 
+// TODO: Přidat shadow
 const Home: NextPage = () => {
   return (
     <div className="min-w-full min-h-full">

@@ -13,6 +13,9 @@ function LinkLeft({ link, text }: LinkProps) {
   );
 }
 
+// TODO: Mléčný sklo
+// TODO: Logo
+// TODO: Hover underline jinou barvou
 export default function Navbar() {
   return (
     <div className="bg-[#2D2D2D] h-16 min-w-full grid grid-cols-3 items-center px-4 md:px-16 text-white text-sm md:text-xl font-semibold sticky top-0 z-50">
