@@ -3,8 +3,6 @@ import About from "../components/page_sections/about";
 import NasTeam from "../components/page_sections/nas_team";
 import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
-import Image from "next/image";
-import playButton from "../public/playbutton.svg";
 import React from "react";
 
 // TODO: Přidat shadow
