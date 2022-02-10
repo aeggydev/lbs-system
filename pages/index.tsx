@@ -29,23 +29,16 @@ const Home: NextPage = () => {
   return (
     <div className="min-w-full min-h-full">
       <div className="grid min-h-screen bg-purple-600 -mt-16">
-        <div className="absolute top-1/3 w-48 h-48 place-self-center grid">
-          <Image
-            src={playButton}
-            alt="Play button"
-            className="place-self-center cursor-pointer select-none"
-            draggable="false"
-            onClick={() => setShowPlayer(true)}
-          />
-          {showPlayer && shadowPlayer}
-        </div>
-        <div className="justify-self-center self-end text-white text-center pb-16">
+        <video autoPlay playsInline loop muted className="absolute top-0 w-full h-full md:object-cover">
+          <source src="/landing_video.mp4" type="video/mp4"></source>
+        </video>
+        <div className="justify-self-center self-end text-white text-center pb-16 z-50">
           <div
             style={{
               fontFamily: "Chakra Petch",
               WebkitTextStroke: "2px black",
             }}
-            className="text-7xl stroke-black stroke-2 pb-4 font-bold"
+            className="text-7xl stroke-black stroke-2 pb-4 font-bold text-red-500"
           >
             LBs System
           </div>
