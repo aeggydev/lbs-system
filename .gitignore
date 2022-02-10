@@ -21,6 +21,7 @@
 
 # media
 public/original.mp4
+public/old_landing_video.mp4
 
 # debug
 npm-debug.log*

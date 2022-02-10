@@ -8,8 +8,8 @@ import { TransparentContext } from "../components/layout";
 
 // TODO: Přidat shadow
 const Home: NextPage = () => {
-  const transparency = useContext(TransparentContext)
-  transparency.setValue(true)
+  const transparency = useContext(TransparentContext);
+  transparency.setValue(true);
 
   const [showPlayer, setShowPlayer] = React.useState(false);
   const shadowPlayer = (
@@ -30,8 +30,14 @@ const Home: NextPage = () => {
 
   return (
     <div className="min-w-full min-h-full">
-      <div className="grid md:min-h-screen bg-white -mt-16">
-        <video autoPlay playsInline loop muted className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover">
+      <div className="grid md:min-h-screen bg-black -mt-16">
+        <video
+          autoPlay
+          playsInline
+          loop
+          muted
+          className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover"
+        >
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
         <div className="justify-self-center self-end text-white text-center pb-16 z-10 hidden md:block">
