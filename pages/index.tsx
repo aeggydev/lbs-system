@@ -3,10 +3,14 @@ import About from "../components/page_sections/about";
 import NasTeam from "../components/page_sections/nas_team";
 import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
-import React from "react";
+import React, { useContext } from "react";
+import { TransparentContext } from "../components/layout";
 
 // TODO: Přidat shadow
 const Home: NextPage = () => {
+  const transparency = useContext(TransparentContext)
+  transparency.setValue(true)
+
   const [showPlayer, setShowPlayer] = React.useState(false);
   const shadowPlayer = (
     <div

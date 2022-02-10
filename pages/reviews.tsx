@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link"
+import { useContext } from "react";
+import { TransparentContext } from "../components/layout";
 
 import { Review, data } from "../data/reviews";
 
@@ -39,6 +41,9 @@ function Review({ review, index }: ReviewProps) {
 }
 
 export default function Reviews() {
+  const transparency = useContext(TransparentContext)
+  transparency.setValue(false)
+
   return (
     <div className="bg-[#3D3D3D] min-h-screen py-6">
       <div className="text-center text-white text-3xl font-medium">Recenze</div>

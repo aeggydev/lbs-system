@@ -2,8 +2,13 @@ import { useRouter } from "next/router";
 import { data } from "../../data/reviews";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
+import { TransparentContext } from "../../components/layout";
 
 export default function Review() {
+  const transparency = useContext(TransparentContext)
+  transparency.setValue(false)
+
   const router = useRouter();
   const { id } = router.query;
   const review = data[Number(id)];
