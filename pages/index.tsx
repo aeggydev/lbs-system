@@ -30,23 +30,23 @@ const Home: NextPage = () => {
 
   return (
     <div className="min-w-full min-h-full">
-      <div className="grid min-h-screen bg-purple-600 -mt-16">
-        <video autoPlay playsInline loop muted className="absolute top-0 w-full h-full md:object-cover">
+      <div className="grid md:min-h-screen bg-white -mt-16">
+        <video autoPlay playsInline loop muted className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover">
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
-        <div className="justify-self-center self-end text-white text-center pb-16 z-10">
+        <div className="justify-self-center self-end text-white text-center pb-16 z-10 hidden md:visible">
           <div
             style={{
               fontFamily: "Chakra Petch",
               WebkitTextStroke: "2px black",
             }}
-            className="text-7xl stroke-black stroke-2 pb-4 font-bold text-red-500"
+            className="md:text-7xl text-4xl stroke-black stroke-2 md:pb-4 font-bold text-red-500"
           >
             LBs System
           </div>
           <div
             style={{ WebkitTextStroke: "1.5px black" }}
-            className="text-5xl font-semibold"
+            className="md:text-5xl text-3xl font-semibold"
           >
             Profesionální coaching
           </div>
