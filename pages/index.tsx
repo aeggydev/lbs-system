@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const [showPlayer, setShowPlayer] = React.useState(false);
   const shadowPlayer = (
     <div
-      className="fixed left-0 top-0 w-screen h-screen z-50 grid"
+      className="fixed left-0 top-0 w-screen h-screen grid"
       style={{ background: "rgba(0,0,0,0.75)" }}
       onClick={() => setShowPlayer(false)}
     >
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <video autoPlay playsInline loop muted className="absolute top-0 w-full h-full md:object-cover">
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
-        <div className="justify-self-center self-end text-white text-center pb-16 z-50">
+        <div className="justify-self-center self-end text-white text-center pb-16 z-10">
           <div
             style={{
               fontFamily: "Chakra Petch",
