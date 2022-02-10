@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <video autoPlay playsInline loop muted className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover">
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
-        <div className="justify-self-center self-end text-white text-center pb-16 z-10 hidden md:visible">
+        <div className="justify-self-center self-end text-white text-center pb-16 z-10 hidden md:block">
           <div
             style={{
               fontFamily: "Chakra Petch",
