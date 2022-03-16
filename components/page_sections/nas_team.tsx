@@ -17,7 +17,8 @@ interface Button {
 }
 export const DotButton = ({ selected, onClick }: Button) => (
   <button
-    className={`embla__dot ${selected ? "is-selected" : ""} w-12 rounded h-2 bg-lime-300`}
+    className={`embla__dot ${selected ? "is-selected" : ""} w-12 rounded h-3 border border-black`}
+    style={{background: selected ? "#F65A5A" : "white"}}
     type="button"
     onClick={onClick}
   />
