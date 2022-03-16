@@ -17,7 +17,7 @@ interface Button {
 }
 export const DotButton = ({ selected, onClick }: Button) => (
   <button
-    className={`embla__dot ${selected ? "is-selected" : ""} w-3 h-4`}
+    className={`embla__dot ${selected ? "is-selected" : ""} w-12 rounded h-2 bg-lime-300`}
     type="button"
     onClick={onClick}
   />
@@ -75,7 +75,7 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
         </div>
         <div
           className="absolute top-1/2 left-4 flex"
-          style={{ fill: "#f83325", opacity: prevBtnEnabled ? "1" : "0.4" }}
+          style={{ fill: "#3123f8", opacity: prevBtnEnabled ? "1" : "0.4" }}
           onClick={scrollPrev}
         >
           <svg
@@ -89,7 +89,7 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
         </div>
         <div
           className="absolute top-1/2 right-4 flex"
-          style={{ fill: "#f83325", opacity: nextBtnEnabled ? "1" : "0.4" }}
+          style={{ fill: "#3123f8", opacity: nextBtnEnabled ? "1" : "0.4" }}
           onClick={scrollNext}
         >
           <svg
@@ -101,8 +101,7 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
             <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z" />
           </svg>
         </div>
-      </div>
-      <div className="embla__dots z-20">
+        <div className="embla__dots absolute justify-center bottom-2 w-full flex flex-row gap-2">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -111,6 +110,8 @@ function EmblaCarousel({ slides }: { slides: Slide[] }) {
           />
         ))}
       </div>
+      </div>
+      
     </>
   );
 }
