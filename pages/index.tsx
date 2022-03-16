@@ -37,6 +37,7 @@ const Home: NextPage = () => {
           loop
           muted
           className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover"
+          poster="../public/poster.jpg"
         >
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
