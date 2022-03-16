@@ -25,7 +25,7 @@ function Review({ review, index }: ReviewProps) {
   );
 
   return (
-    <div className="text-white font-serif">
+    <div className="text-white">
       {review.textLong ? <Link href={url}>{Img}</Link> : Img}
       <div className="py-2 text-xl">{review.title}</div>
       <div className="italic">“{review.text}”</div>

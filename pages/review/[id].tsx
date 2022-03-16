@@ -17,7 +17,7 @@ export default function Review() {
   imageClone.src = "/" + imageClone.src;
 
   return (
-    <div className="bg-[#3D3D3D] text-white text-xl py-12 px-8 md:px-40 font-serif">
+    <div className="bg-[#3D3D3D] text-white text-xl py-12 px-8 md:px-40">
       <div
         style={{
           gridTemplateColumns: "57fr 43fr",
