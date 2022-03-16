@@ -5,6 +5,7 @@ import { TeamData } from "../data/NasTeam";
 import Services from "../components/page_sections/services";
 import React, { useContext } from "react";
 import { TransparentContext } from "../components/layout";
+import Poster from "../public/poster.jpg"
 
 // TODO: Přidat shadow
 const Home: NextPage = () => {
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
           loop
           muted
           className="md:absolute mt-10 md:mt-0 md:top-0 w-full h-full md:object-cover"
-          poster="../public/poster.jpg"
+          poster={Poster.src}
         >
           <source src="/landing_video.mp4" type="video/mp4"></source>
         </video>
